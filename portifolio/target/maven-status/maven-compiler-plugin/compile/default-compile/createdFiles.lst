@@ -1,0 +1,10 @@
+com\example\dao\Conexao.class
+com\example\controller\LoginServlet.class
+com\example\filter\AdminFilter.class
+com\example\controller\PokedexServlet.class
+com\example\controller\AdminServlet.class
+com\example\controller\LogoutServlet.class
+com\example\dao\PokemonDao.class
+com\example\dao\UsuarioDao.class
+com\example\model\Usuario.class
+com\example\model\Pokemon.class

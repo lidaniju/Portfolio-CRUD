@@ -1,0 +1,201 @@
+/* VERSAO 3 - pokedex azul e amarelo */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --fundo: #0b1426;
+    --superficie: #131f38;
+    --destaque: #ffcb05;
+    --destaque-hover: #ffe066;
+    --texto: #eef2fb;
+    --texto-suave: #93a1bf;
+    --borda: #25334f;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: Poppins, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    flex: 1;
+}
+
+h1 {
+    font-weight: 700;
+    text-align: center;
+    color: var(--destaque);
+    margin-bottom: 10px;
+}
+
+h2 { text-align: center; }
+p { text-align: center; }
+
+a { color: var(--destaque); text-decoration: none; transition: 0.2s; }
+a:hover { color: var(--destaque-hover); }
+
+/* Menu */
+.menu {
+    background-color: var(--superficie);
+    padding: 14px;
+    border-bottom: 3px solid var(--destaque);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu a { color: var(--texto); font-weight: 500; }
+.menu a:hover { color: var(--destaque); }
+
+/* Cards (mantidos) */
+.pokemons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 250px;
+    max-width: 300px;
+    transition: transform 0.3s;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+.card h2 { color: #ffd700; font-family: 'Cinzel', serif; }
+.card p { color: #f5f5f5; }
+
+.card img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 10px auto;
+}
+
+.numero { color: #aaa; font-size: 0.9em; }
+
+.tipo {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 12px;
+    background: #444;
+    color: #fff;
+    font-size: 0.85em;
+    margin: 4px 2px;
+}
+
+.tipo.planta   { background: #2e7d32; }
+.tipo.veneno   { background: #6a1b9a; }
+.tipo.fogo     { background: #e65100; }
+.tipo.agua     { background: #1565c0; }
+.tipo.eletrico { background: #f9a825; color: #111; }
+
+/* Tabela do admin */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: var(--superficie);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #1a2a4a;
+    color: var(--destaque);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+td, th {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid var(--borda);
+}
+
+tr:last-child td { border-bottom: none; }
+
+td img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Formularios */
+form.caixa {
+    max-width: 450px;
+    margin: 20px auto;
+    background: var(--superficie);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--borda);
+}
+
+form.caixa p { text-align: left; }
+form.caixa label { color: var(--texto-suave); font-size: 0.9em; }
+
+form.caixa input,
+form.caixa textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background: var(--fundo);
+    color: var(--texto);
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+form.caixa input:focus,
+form.caixa textarea:focus { outline: none; border-color: var(--destaque); }
+
+/* Botoes */
+button {
+    background-color: var(--destaque);
+    color: #111;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+button:hover { background-color: var(--destaque-hover); }
+form.caixa button { display: block; margin: 0 auto; }
+
+.erro { color: #ff6b6b; margin-bottom: 10px; }
+
+footer {
+    background-color: var(--superficie);
+    color: var(--texto-suave);
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid var(--borda);
+}
